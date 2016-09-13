@@ -123,14 +123,13 @@ public class Strings {
         System.out.println(helloWorld.length());
         */
 
-
         //Part 10.
         // 1.  Comment the previous block using single line comment syntax.
-        // 3.  Read about this indexOf command:  https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#indexOf-java.lang.String-
-        // 4.  Write a program that will:
+        // 2.  Read about this indexOf command:  https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#indexOf-java.lang.String-
+        // 3.  Write a program that will:
         //     a.  Declare and initialize a variable named myHelloWorld with the string literal "My Hello World".
         //     b.  Print out to the console the index of the letter H.
-        // 6.  Answer the Part 10 question.
+        // 4.  Answer the Part 10 question.
     }
 
 }
