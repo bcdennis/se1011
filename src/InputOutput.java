@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class InputOutput {
 
     public static void main(String[] args) {
-        //outputDemo();
+        outputDemo();
         //inputDemo();
         //guiDemo();
 
@@ -17,7 +17,7 @@ public class InputOutput {
 
         System.out.println("     /\\___/\\");
         System.out.println("    (  o o  )");
-        System.out.println("    /   *   \\");
+        System.out.println("    /   *   \\\t-meow");
         System.out.println("    \\__\\_/__/");
         System.out.println("      /   \\");
         System.out.println("     / ___ \\");
