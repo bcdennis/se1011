@@ -4,14 +4,14 @@ import java.util.Scanner;
 public class InputOutput {
 
     public static void main(String[] args) {
-        //doOutputDemo();
-        //doInputDemo();
-        doGuiDemo();
+        //outputDemo();
+        //inputDemo();
+        //guiDemo();
 
         //Your turn
-        //runStudentWorkshop();
+        //studentWorkshop();
     }
-    private static void doOutputDemo() {
+    private static void outputDemo() {
         //ASCII Art
         // https://docs.oracle.com/javase/8/docs/api/java/lang/System.html
 
@@ -33,7 +33,7 @@ public class InputOutput {
         System.out.println(escapeChars+"\n\n");
     }
 
-    private static void doInputDemo() {
+    private static void inputDemo() {
         // Variable declarations & initializations
         Scanner standardIn = new Scanner(System.in);
         byte inputForByte;
@@ -49,17 +49,27 @@ public class InputOutput {
         System.out.print("Enter in a small whole number:  ");
         inputForByte = standardIn.nextByte();
 
+        //prompt the user, then skip any leading whitespace from the input
+        // until a token is found, then return the token as an int.
         System.out.print("Enter in a large whole number: ");
         inputForInteger = standardIn.nextInt();
 
+        //prompt the user, then skip any leading whitespace from the input
+        // until a token is found, then return the token as a double.
         System.out.print("Enter in a rational number:  ");
         inputForDouble = standardIn.nextDouble();
 
+        //prompt the user, then skip any leading whitespace from the input
+        // until a token is found, then return the token as an boolean.
         System.out.print("Enter in a boolean ('true' or 'false'): ");
         inputForBoolean = standardIn.nextBoolean();
 
+        // nextLine processes leading whitespace.  The previous CRLF is left on the System.in buffer
+        // so we must have this line to remove the leftover character from the buffer.
         standardIn.nextLine();
 
+        //prompt the user, then skip any leading whitespace from the input
+        // until a token is found, then return the token as a String.
         System.out.print("Enter in any string: ");
         inputForString = standardIn.nextLine();
 
@@ -71,7 +81,7 @@ public class InputOutput {
 
     }
 
-    private static void doGuiDemo() {
+    private static void guiDemo() {
         // Variable declarations
         byte inputForByte;
         int inputForInteger;
