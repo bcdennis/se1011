@@ -34,6 +34,7 @@ public class InputOutput {
     }
 
     private static void inputDemo() {
+        // https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html
         // Variable declarations & initializations
         Scanner standardIn = new Scanner(System.in);
         byte inputForByte;
