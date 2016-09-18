@@ -1,3 +1,13 @@
+/*
+ * InputOutput.java
+ *
+ * This is a simple program that will be used to demonstrate
+ * I/O.
+ *
+ * @author Brad Dennis
+ * Created:  09/13/2016
+ * Modified: --
+ */
 import javax.swing.*;
 import java.util.Scanner;
 
@@ -15,17 +25,18 @@ public class InputOutput {
         //ASCII Art
         // https://docs.oracle.com/javase/8/docs/api/java/lang/System.html
 
-        System.out.println("     /\\___/\\");
-        System.out.println("    (  o o  )");
-        System.out.println("    /   *   \\\t-meow");
-        System.out.println("    \\__\\_/__/");
-        System.out.println("      /   \\");
-        System.out.println("     / ___ \\");
-        System.out.println("     \\/___\\/");
+        {
+            System.out.println("     /\\___/\\");
+            System.out.println("    (  o o  )");
+            System.out.println("    /   *   \\\t-meow");
+            System.out.println("    \\__\\_/__/");
+            System.out.println("      /   \\");
+            System.out.println("     / ___ \\");
+            System.out.println("     \\/___\\/");
 
-        System.out.println("\n\n\n");
-        //http://www.tutorialspoint.com/java/java_characters.htm
-
+            System.out.println("\n\n\n");
+            //http://www.tutorialspoint.com/java/java_characters.htm
+        }
         System.out.print("This doesn't have");
         System.out.println(" a linebreak.");
 
