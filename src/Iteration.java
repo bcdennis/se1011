@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /*
  * Iteration.java
  *
@@ -10,6 +8,9 @@ import java.util.Scanner;
  * Created:  09/18/2016
  * Modified: --
  */
+import java.util.Scanner;
+
+
 public class Iteration {
     public static void main(String[] args) {
         int x = 100;
