@@ -24,10 +24,12 @@ public class Iteration {
         Scanner standardIn = new Scanner(System.in);
         boolean isQuitting = false;
         while (!isQuitting) {
-            System.out.println("Enter any string ('q' or 'Q' to quit): ");
+            System.out.print("Enter any string ('q' or 'Q' to quit): ");
             String input = standardIn.nextLine();
             if (input.equalsIgnoreCase("q")) {
                 isQuitting = true;
+            } else {
+                System.out.println("You entered: " + input);
             }
         }
 
