@@ -116,7 +116,7 @@ public class Strings {
         // 4.  Answer the first Part 9 question.
         // 5.  Run this program.
         // 6.  Answer the second Part 9 question.
-        // 7.  Answer the third, fourth, and fifth Part 8 questions.
+        // 7.  Answer the third, fourth, and fifth Part 9 questions.
 
         /*
         String helloWorld = "Hello World";
