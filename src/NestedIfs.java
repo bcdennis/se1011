@@ -23,22 +23,22 @@ public class NestedIfs {
         if (age < 13) {
             if (age > 5) {
                 System.out.println("You are in elementary school.");
-            } else if (age > 3) {
+            } else if (age >= 3) {
                 System.out.println("You are in pre-K");
             } else {
                 System.out.println("You are in diapers!");
             }
 
-        } else if (age < 19) {
+        } else if (age <= 19) {
             System.out.println("You are in high school");
 
         } else {
-            if (age < 65) {
+            if (age <= 65) {
                 System.out.println("You are probably working.");
             } else {
                 System.out.println("Retired! (Maybe?)");
-                if (age > 71) {
-                    System.out.println("Retired for sure!");
+                if (age == 72) {
+                    System.out.println("Happy retirement!");
                 }
             }
         }
