@@ -4,7 +4,7 @@
  * This is a simple program to demonstrate conditionals.
  *
  * @author Brad Dennis
- * Created:  09/20/2016
+ * Created:  09/25/2016
  * Modified: --
  */
 import java.util.Scanner;
@@ -12,9 +12,9 @@ import java.util.Scanner;
 
 public class Conditionals {
     public static void main(String[] args) {
-        //doOrPracticeProblem();
+        doOrPracticeProblem();
         doAndPracticeProblem();
-        //doNotPracticeProblem();
+        doNotPracticeProblem();
     }
 
     private static void doOrPracticeProblem() {
