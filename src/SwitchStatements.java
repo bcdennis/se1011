@@ -28,6 +28,7 @@ public class SwitchStatements {
 
         System.out.println("*****[ Barnyard Animals Menu ]*****");
         System.out.println("Available animals:");
+        System.out.println("'l' for lamb");
         System.out.println("'d' for duck");
         System.out.println("'c' for cow");
         System.out.println("'s' for sheep");
@@ -62,6 +63,7 @@ public class SwitchStatements {
 
         System.out.println("*****[ Barnyard Animals Menu ]*****");
         System.out.println("Available animals:");
+        System.out.println("'l' for lamb");
         System.out.println("'d' for duck");
         System.out.println("'c' for cow");
         System.out.println("'s' for sheep");
