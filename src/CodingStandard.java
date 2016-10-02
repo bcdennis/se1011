@@ -3,13 +3,11 @@ import java.util.Scanner;
 public class CodingStandard {
 
     public static void main(String[] args) {
-
         Scanner si = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int diameter = si.nextInt();
         si.nextLine();
         if (diameter < 1) System.out.println("Cannot make a zero or negative sized square.  Exiting.");
-
         System.out.print("Filled in? (y/n) ");
         String A = si.nextLine();
 
