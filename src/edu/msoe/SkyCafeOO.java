@@ -58,7 +58,7 @@ public class SkyCafeOO {
         sandwich.setBread(input.nextInt());
 
         System.out.print("Enter meat (" + Sandwich.HAM + " for ham, " + Sandwich.TURKEY + " for turkey): ");
-        sandwich.setCondiments(input.nextInt());
+        sandwich.setMeat(input.nextInt());
 
         System.out.print("Enter condiments (" + Sandwich.NONE + " for none, " + Sandwich.MAYO + " for mayo): ");
         sandwich.setCondiments(input.nextInt());
