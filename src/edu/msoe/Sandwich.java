@@ -25,6 +25,7 @@ public class Sandwich {
      * @param breadType  The bread type.
      */
     public void setBread(int breadType) {
+
         bread = breadType;
     }
 
@@ -83,6 +84,16 @@ public class Sandwich {
         }
 
         return price;
+    }
+
+    /**
+     *
+     * @param obj
+     * @return
+     */
+    public boolean equals(Object obj) {
+
+        return false;
     }
 
     /**

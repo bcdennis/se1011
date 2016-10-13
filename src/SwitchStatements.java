@@ -41,7 +41,6 @@ public class SwitchStatements {
         switch(menuSelection.charAt(0)) {
             case DUCK:
                 System.out.println("Quack quack");
-                break;
             case COW:
                 System.out.println("Moooooo");
                 break;

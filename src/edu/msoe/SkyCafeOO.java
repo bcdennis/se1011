@@ -9,14 +9,18 @@ import java.util.Scanner;
  */
 public class SkyCafeOO {
 
-    private static final int BUILD_SANDWICH = 1;
+    public static final int BUILD_SANDWICH = 1;
     private static final int CALCULATE_PRICE = 2;
     private static final int QUIT = 0;
+
+    private static Sandwich sandwich;
 
     public static void main(String[] args){
         Scanner standardIn = new Scanner(System.in);
         int menuChoice;
-        Sandwich sandwich = null;
+        sandwich = null;
+
+
         boolean quitting = false;
 
         while (!quitting) {
@@ -53,10 +57,18 @@ public class SkyCafeOO {
 
     private static Sandwich buildASandwich(Scanner input) {
         Sandwich sandwich = new Sandwich();
+        Sandwich anotherSandwich = new Sandwich();
+        Sandwich thirdSandwich = new Sandwich();
+        int i  = 10;
 
         System.out.print("Enter bread (" + Sandwich.WHITE_BREAD + " for white, " + Sandwich.WHEAT_BREAD + " for wheat): ");
-        sandwich.setBread(input.nextInt());
+        sandwich.setBread(1);
+        anotherSandwich.setBread(0);
+        thirdSandwich.setCondiments(1);
 
+
+        System.out.println(sandwich == anotherSandwich);
+        System.out.println(sandwich.equals(anotherSandwich));
         System.out.print("Enter meat (" + Sandwich.HAM + " for ham, " + Sandwich.TURKEY + " for turkey): ");
         sandwich.setMeat(input.nextInt());
 
