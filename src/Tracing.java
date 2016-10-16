@@ -17,11 +17,10 @@ public class Tracing {
 
         System.out.println(percentReplacer.replace("The % brown fox ", "quick"));
         System.out.println(poundReplacer.replace("jumped over the # dog.", "lazy"));
-
     }
 
     private class StringReplacer {
-        private char marker = '%';
+        private char marker = 'X';
 
         /**
          * A StringReplacer can't be instantiated with passing in a marker.
