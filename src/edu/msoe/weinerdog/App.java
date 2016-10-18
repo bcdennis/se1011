@@ -37,6 +37,15 @@ public class App{
             System.out.println(jazz.getName() + " could not be registered in the Pupper race.");
         }
 
+
+        System.out.println("Jazz's age is : " + jazz.getAge());
+
+        WienerDog jazz2 = jazz;
+        jazz2.setAge(3);
+
+        //What will this print?  Why?
+        System.out.println("Jazz's age is now: " + jazz.getAge());
+
         // Write more code to test the other new features.
 
     }
