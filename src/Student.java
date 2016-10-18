@@ -35,11 +35,9 @@ public class Student {
     }
 
     public boolean equals(Object object) {
-        if (object == this) {
-            return true;
-        } else {
-            return false;
-        }
+        Student otherStudent = (Student)object;
+        return otherStudent.getStudentId() == this.getStudentId();
+
     }
 
     public String toString() {

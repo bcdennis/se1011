@@ -15,7 +15,7 @@ public class SkyCafeOO {
 
     private static Sandwich sandwich;
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner standardIn = new Scanner(System.in);
         int menuChoice;
         sandwich = null;
@@ -45,7 +45,7 @@ public class SkyCafeOO {
 
     }
 
-    private static void displayPrice(Sandwich sandwich) {
+    private static void displayPrice (Sandwich sandwich) {
         if (sandwich == null) {
             System.out.println("You must build a sandwich first.");
         } else {
@@ -59,10 +59,11 @@ public class SkyCafeOO {
         Sandwich sandwich = new Sandwich();
         Sandwich anotherSandwich = new Sandwich();
         Sandwich thirdSandwich = new Sandwich();
-        int i  = 10;
+        int i = 10;
 
         System.out.print("Enter bread (" + Sandwich.WHITE_BREAD + " for white, " + Sandwich.WHEAT_BREAD + " for wheat): ");
         sandwich.setBread(1);
+
         anotherSandwich.setBread(0);
         thirdSandwich.setCondiments(1);
 
