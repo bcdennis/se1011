@@ -14,6 +14,8 @@ package edu.msoe.weinerdog;
  */
 public class App{
 
+    private int test;
+
     public static void main(String[] args) {
         Race pupperRace = new Race(Race.PUPPER);
         Race doggoRace = new Race(Race.DOGGO);
@@ -25,12 +27,12 @@ public class App{
         WienerDog abby = new WienerDog(5, 22.0);
         jazz.setName("Abby");
         jazz.setOwner("Dr. Dennis");
-
+/*
         // Code to test the new constructors.
         WienerDog rufus = new WienerDog(2, 15.0, "Rufus", "Dr. Dennis");
         WienerDog fritz = new WienerDog(7, 14.0, "Fritz", "Dr. Dennis");
         WienerDog daisy = new WienerDog(3, 17.0, "Daisy", "Dr. Dennis");
-
+*/
         if (pupperRace.register(jazz)) {
             System.out.println(jazz.getName() + " was registered in the Pupper race.");
         } else {
@@ -49,4 +51,5 @@ public class App{
         // Write more code to test the other new features.
 
     }
+
 }
