@@ -7,6 +7,8 @@
  */
 package edu.msoe.aliens;
 
+import java.util.Random;
+
 /**
  * This class models the predator for our Roshambo game.
  *
@@ -15,6 +17,7 @@ package edu.msoe.aliens;
  */
 public class Predator {
 
+    private Random random;
     private int rockCounter = 0;
     private int paperCounter = 0;
     private int scissorsCounter = 0;
@@ -48,6 +51,22 @@ public class Predator {
         return winsCounter + lossCounter;
     }
 
+
+    /**
+     * Default constructor, uses a different seed for each instance.
+     */
+    public Predator() {
+        random = new Random();
+    }
+
+    /**
+     * Test constructor to make the knock method determinate.
+     * @param seed the seed to use for the random number generator.
+     */
+    public Predator(long seed) {
+        random = new Random(seed);
+    }
+
     /**
      * This calculates a game move based up on the AI settings.
      *
@@ -55,7 +74,7 @@ public class Predator {
      */
     public int knock() {
         int move = Roshambo.SCISSORS;
-        double roll = Math.random();
+        double roll = random.nextDouble();
 
         if (roll <= ROCK_THRESHOLD) {
             move = Roshambo.ROCK;
@@ -81,7 +100,7 @@ public class Predator {
      * Used to increment the players win total.
      */
     public void incrementLosses() {
-        winsCounter++;
+        lossCounter++;
     }
 
 }
