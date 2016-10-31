@@ -13,8 +13,7 @@ package edu.msoe.exams;
  * @author bdennis
  * @version 2016.10.30
  */
-import edu.msoe.arrays.Exam;
-import edu.msoe.arrays.Question;
+
 
 public class AppTests {
 
@@ -64,7 +63,7 @@ public class AppTests {
         String name = "Adding 0 scores";
         String result = FAILED;
 
-        if (test.getScoreCount() == 0) {
+        if (test.getNumberOfScores() == 0) {
             result = PASSED;
         }
 
@@ -75,7 +74,7 @@ public class AppTests {
 
         test.add(10);
 
-        if (test.getScoreCount() == 1) {
+        if (test.getNumberOfScores() == 1) {
             result = PASSED;
         }
 
@@ -88,7 +87,7 @@ public class AppTests {
         test.add(10);
         test.add(11);
 
-        if (test.getScoreCount() == 2) {
+        if (test.getNumberOfScores() == 2) {
             result = PASSED;
         }
 
@@ -109,7 +108,7 @@ public class AppTests {
         test.add(32);
         test.add(11);
 
-        if (test.getScoreCount() == 10) {
+        if (test.getNumberOfScores() == 10) {
             result = PASSED;
         }
 
@@ -139,7 +138,7 @@ public class AppTests {
         test.add(25);
         test.add(32);
 
-        if (test.getScoreCount() == 19) {
+        if (test.getNumberOfScores() == 19) {
             result = PASSED;
         }
 
@@ -170,7 +169,7 @@ public class AppTests {
         test.add(32);
         test.add(25);
 
-        if (test.getScoreCount() == 20) {
+        if (test.getNumberOfScores() == 20) {
             result = PASSED;
         }
 
@@ -202,7 +201,7 @@ public class AppTests {
         test.add(25);
         test.add(50);
 
-        if (test.getScoreCount() == 20) {
+        if (test.getNumberOfScores() == 20) {
             result = PASSED;
         }
 
@@ -217,7 +216,7 @@ public class AppTests {
         String result = FAILED;
 
         test.add(-1);
-        if (test.getScoreCount() == 0) {
+        if (test.getNumberOfScores() == 0) {
             result = PASSED;
         }
 
@@ -228,7 +227,7 @@ public class AppTests {
         result = FAILED;
 
         test.add(0);
-        if (test.getScoreCount() == 1) {
+        if (test.getNumberOfScores() == 1) {
             result = PASSED;
         }
 
@@ -239,7 +238,7 @@ public class AppTests {
         result = FAILED;
 
         test.add(1);
-        if (test.getScoreCount() == 1) {
+        if (test.getNumberOfScores() == 1) {
             result = PASSED;
         }
 
@@ -300,7 +299,7 @@ public class AppTests {
         test.add(10);
         test.add(50);
 
-        if (test.getScoreCount() == 3) {
+        if (test.getNumberOfScores() == 3) {
             result = PASSED;
         }
 
