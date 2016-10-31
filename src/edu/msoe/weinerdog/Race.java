@@ -41,7 +41,7 @@ public class Race {
     public boolean register(WienerDog dog) {
         boolean wasRegistered = false;
 
-        //TODO add a feature such that a single global counter is kept for all registrants.
+        //TODO addScores a feature such that a single global counter is kept for all registrants.
 
         //TODO if a dog was registered, set it's league.
         

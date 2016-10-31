@@ -67,7 +67,7 @@ public class Race {
                 registrants++;
                 wasRegistered = true;
 
-                //TODO add a feature such that a single global counter is kept for all registrants.
+                //TODO addScores a feature such that a single global counter is kept for all registrants.
                 Race.totalRegistrants++;
                 //TODO if a dog was registered, set it's league.
                 dog.setLeague(Race.PUPPER_LEAGUE);

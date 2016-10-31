@@ -13,6 +13,9 @@ package edu.msoe.exams;
  * @author bdennis
  * @version 2016.10.30
  */
+import edu.msoe.arrays.Exam;
+import edu.msoe.arrays.Question;
+
 public class AppTests {
 
     private static final String PASSED = "passed";
@@ -348,7 +351,6 @@ public class AppTests {
 
         System.out.println("Test -  " + name + " - " + result);
 
-        System.out.println("Adding Question Tests:");
         test = new Exam("Test Exam");
         name = "Adding one question";
         result = FAILED;
@@ -361,7 +363,6 @@ public class AppTests {
 
         System.out.println("Test -  " + name + " - " + result);
 
-        System.out.println("Adding Question Tests:");
         test = new Exam("Test Exam");
         name = "Adding two questions";
         result = FAILED;
@@ -375,7 +376,6 @@ public class AppTests {
 
         System.out.println("Test -  " + name + " - " + result);
 
-        System.out.println("Adding Question Tests:");
         test = new Exam("Test Exam");
         name = "Adding three questions";
         result = FAILED;
@@ -390,7 +390,6 @@ public class AppTests {
 
         System.out.println("Test -  " + name + " - " + result);
 
-        System.out.println("Adding Question Tests:");
         test = new Exam("Test Exam");
         name = "Adding four questions";
         result = FAILED;
@@ -406,7 +405,6 @@ public class AppTests {
 
         System.out.println("Test -  " + name + " - " + result);
 
-        System.out.println("Adding Question Tests:");
         test = new Exam("Test Exam");
         name = "Adding five questions";
         result = FAILED;
@@ -423,7 +421,6 @@ public class AppTests {
 
         System.out.println("Test -  " + name + " - " + result);
 
-        System.out.println("Adding Question Tests:");
         test = new Exam("Test Exam");
         name = "Adding six questions";
         result = FAILED;

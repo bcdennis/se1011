@@ -72,10 +72,10 @@ public class WienerDog {
     }
 
 
-    //TODO add a convenience constructor that accepts parameters for all of the dogs attributes, except league.
+    //TODO addScores a convenience constructor that accepts parameters for all of the dogs attributes, except league.
     //Note: Do not copy code, reuse the first constructor.
 
-    //TODO add an equals override
+    //TODO addScores an equals override
 
     //TODO write a class method that accepts two dog instances as parameters.
     //Copy the attributes from the first to second.

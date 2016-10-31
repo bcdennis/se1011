@@ -5,7 +5,7 @@
  * Name: Brad Dennis
  * Created: 10/30/2018
  */
-package edu.msoe.exams;
+package edu.msoe.arrays;
 
 /**
  * This class models an SE1011 exam question.  There is a maximum of 20 students in a given SE1011 section.
@@ -20,26 +20,7 @@ public class Question {
     private String text = "Default question text.";
     private int points = 0;
 
-    private int student1Score = NO_SCORE;
-    private int student2Score = NO_SCORE;
-    private int student3Score = NO_SCORE;
-    private int student4Score = NO_SCORE;
-    private int student5Score = NO_SCORE;
-    private int student6Score = NO_SCORE;
-    private int student7Score = NO_SCORE;
-    private int student8Score = NO_SCORE;
-    private int student9Score = NO_SCORE;
-    private int student10Score = NO_SCORE;
-    private int student11Score = NO_SCORE;
-    private int student12Score = NO_SCORE;
-    private int student13Score = NO_SCORE;
-    private int student14Score = NO_SCORE;
-    private int student15Score = NO_SCORE;
-    private int student16Score = NO_SCORE;
-    private int student17Score = NO_SCORE;
-    private int student18Score = NO_SCORE;
-    private int student19Score = NO_SCORE;
-    private int student20Score = NO_SCORE;
+    private int[] scores;
     private int numberOfScores = 0;
 
 
@@ -74,7 +55,7 @@ public class Question {
     }
 
 
-    public int getNumberOfScores() {
+    public int getScoreCount() {
         return numberOfScores;
     }
 
@@ -87,6 +68,7 @@ public class Question {
     public Question(String text, int points) {
         setText(text);
         setPoints(points);
+        scores = new int[0];
     }
 
     /**
@@ -100,15 +82,14 @@ public class Question {
             return;
         }
 
-        if (student1Score == NO_SCORE) {
-            student1Score = score;
-            numberOfScores++;
-        } else if (student2Score == NO_SCORE) {
-            student2Score = score;
-            numberOfScores++;
+        //first case this is the first score being added
+        if (scores.length == 0) {
+
+        } else {
+            //make a new array that's big enough, copy the old one to the new one, then add the score.
         }
 
-        //TODO finish this
+        //TODO implement this with an array.
     }
 
     /**
@@ -118,87 +99,11 @@ public class Question {
      */
     public int getMaxScore() {
         int max = Integer.MIN_VALUE;
-
-        if (student1Score > max) {
-            max = student1Score;
+        for (int i = 0; i < scores.length; i++) {
+            if (scores[i] > max) {
+                max = scores[i];
+            }
         }
-
-        if (student2Score > max) {
-            max = student2Score;
-        }
-
-        if (student3Score > max) {
-            max = student3Score;
-        }
-
-        if (student4Score > max) {
-            max = student4Score;
-        }
-
-        if (student5Score > max) {
-            max = student5Score;
-        }
-
-        if (student6Score > max) {
-            max = student6Score;
-        }
-
-        if (student7Score > max) {
-            max = student7Score;
-        }
-
-        if (student8Score > max) {
-            max = student8Score;
-        }
-
-        if (student9Score > max) {
-            max = student9Score;
-        }
-
-        if (student10Score > max) {
-            max = student10Score;
-        }
-
-        if (student11Score > max) {
-            max = student11Score;
-        }
-
-        if (student12Score > max) {
-            max = student12Score;
-        }
-
-        if (student13Score > max) {
-            max = student13Score;
-        }
-
-        if (student14Score > max) {
-            max = student14Score;
-        }
-
-        if (student15Score > max) {
-            max = student15Score;
-        }
-
-        if (student16Score > max) {
-            max = student16Score;
-        }
-
-        if (student17Score > max) {
-            max = student17Score;
-        }
-
-        if (student18Score > max) {
-            max = student18Score;
-        }
-
-        if (student19Score > max) {
-            max = student19Score;
-        }
-
-        if (student20Score > max) {
-            max = student20Score;
-        }
-
         return max;
     }
 
@@ -223,8 +128,16 @@ public class Question {
      */
     public double getScoreAverage() {
         double average = 0.0;
+        int total = 0;
 
-        //TODO implement this
+        for (int i = 0; i < scores.length; i++) {
+            total += scores[i];
+        }
+
+        if (scores.length > 0) {
+            average = (double) total / scores.length;
+        }
+
         return average;
     }
 
@@ -235,7 +148,8 @@ public class Question {
      */
     public int getMedianScore() {
 
-        // How would you do this?
+        // With an array, you could sort it then find the middle of the array.
+        // easy peasy.
 
         return -1;
     }
@@ -248,7 +162,7 @@ public class Question {
         buffer += "MAX: " + getMaxScore() + "\n";
         buffer += "AVG: " + getScoreAverage() + "\n";
         buffer += "MED: " + getMedianScore() + "\n";
-        buffer += "TOTAL: " + getNumberOfScores() + "\n";
+        buffer += "TOTAL: " + getScoreCount() + "\n";
 
         return buffer;
     }

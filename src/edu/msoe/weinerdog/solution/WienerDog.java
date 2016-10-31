@@ -72,7 +72,7 @@ public class WienerDog implements Cloneable{
         setWeight(weight);
     }
 
-    //TODO add a convenience constructor that accepts parameters for all of the dogs attributes, except league.
+    //TODO addScores a convenience constructor that accepts parameters for all of the dogs attributes, except league.
     //Note: Do not copy code, reuse the first constructor.
 
     /**
@@ -89,7 +89,7 @@ public class WienerDog implements Cloneable{
         setOwner(owner);
     }
 
-    //TODO add an equals override
+    //TODO addScores an equals override
     public boolean equals(Object object) {
         boolean isEqual = false;
         if (object != null && object instanceof WienerDog) {

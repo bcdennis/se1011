@@ -59,7 +59,7 @@ public class Exam {
     /**
      * Calculates the number of questions an exam has.
      *
-     * @return the getScoreCount of exam questions.
+     * @return the getNumberOfScores of exam questions.
      */
     public int getNumberOfQuestions() {
         //TODO implement this.
