@@ -13,8 +13,8 @@ public class TestDriver {
     private static final long SEED = 40943466621L;
 
     public static void main(String[] args) {
-        //randomWithSeedDemo();
-        predatorTests();
+        randomWithSeedDemo();
+        //predatorTests();
     }
 
     private static void predatorTests() {

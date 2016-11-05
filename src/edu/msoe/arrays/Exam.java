@@ -9,7 +9,7 @@ package edu.msoe.arrays;
 
 /**
  * This class models an SE1011 exam.  An SE1011 exam can have up to 5 questions.
- * There are a getMaxScore of 20 students in a SE1011 section.
+ * There are a total of 20 students in a SE1011 section.
  *
  * @author bdennis
  * @version 2016.10.30
