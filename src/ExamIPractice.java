@@ -28,7 +28,7 @@ public class ExamIPractice {
             if (input.equals("")) {
                 wordCounter--;
                 quitting = true;
-                System.out.println("Word count: " + wordCounter);
+                System.out.println("Word getNumberOfScores: " + wordCounter);
 
             } else if (input.contains(".")) {
                 System.out.println(sentence);

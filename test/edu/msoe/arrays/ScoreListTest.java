@@ -65,6 +65,33 @@ public class ScoreListTest {
 
 
     @org.junit.Test
+    public void testLastIndexOfReturnsNegativeOneIfDoesntExist() throws Exception {
+        list.add(100);
+        assertEquals(-1, list.lastIndexOf(90));
+    }
+
+
+    @org.junit.Test
+    public void testLastIndexOfReturnsIndexIfOneExists() throws Exception {
+        list.add(100);
+        list.add(90);
+        list.add(80);
+        assertEquals(1, list.lastIndexOf(90));
+    }
+
+
+    @org.junit.Test
+    public void testLastIndexOfReturnsIndexIfMoreThanOneExists() throws Exception {
+        list.add(100);
+        list.add(90);
+        list.add(80);
+        list.add(70);
+        list.add(90);
+        list.add(60);
+        assertEquals(4, list.lastIndexOf(90));
+    }
+
+    @org.junit.Test
     public void testIndexOfReturnsCorrectIndex() throws Exception {
         list.add(100);
         assertEquals(0, list.indexOf(100));

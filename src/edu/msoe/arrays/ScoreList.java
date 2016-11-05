@@ -140,10 +140,29 @@ public class ScoreList {
      */
     public int indexOf(int score) {
         int index = ERROR;
+
+
         for (int i = 0; i < size(); i++) {
             if (scores[i] == score) {
                 index = i;
                 break;
+            }
+        }
+        return index;
+    }
+
+    /**
+     * Returns the index the first occurrence of the score.
+     * -1 if it's not found.
+     *
+     * @param score the score to look for.
+     * @return the index of the score
+     */
+    public int lastIndexOf(int score) {
+        int index = ERROR;
+        for (int i = 0; i < size(); i++) {
+            if (scores[i] == score) {
+                index = i;
             }
         }
         return index;
@@ -167,12 +186,15 @@ public class ScoreList {
     public boolean contains(int score) {
         boolean wasFound = false;
 
-        for (int i = 0; i < size(); i++) {
-            if (scores[i] == score) {
+        //enhanced for-loop
+        //"for each exam score in scores"
+        for (int examScore : scores) {
+            if (score == examScore) {
                 wasFound = true;
                 break;
             }
         }
+
         return wasFound;
     }
 
