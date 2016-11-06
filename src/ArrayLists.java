@@ -22,6 +22,8 @@ public class ArrayLists {
 
         firstLast6Tests();
         sum3Tests();
+        makeMiddleTests();
+        maxTripleTests();
     }
 
 
@@ -58,17 +60,30 @@ public class ArrayLists {
         return -1;
     }
 
-    /**
-     *
+    /*
      * Given an array of ints of even length, return a new array length 2 containing the middle two
      * elements from the original array. The original array will be length 2 or more.
+     *
      * makeMiddle([1, 2, 3, 4]) → [2, 3]
      * makeMiddle([7, 1, 2, 3, 4, 9]) → [2, 3]
      * makeMiddle([1, 2]) → [1, 2]
      */
     private static int[] makeMiddle(int[] nums) {
 
-        return new int[0];
+        return new int[]{-1, -1};
+    }
+
+    /*
+     * Given an array of ints of odd length, look at the first, last, and middle values in the array
+     * and return the largest. The array length will be a least 1.
+     *
+     * maxTriple([1, 2, 3]) → 3
+     * maxTriple([1, 5, 3]) → 5
+     * maxTriple([5, 2, 3]) → 5
+     */
+    private static int maxTriple(int[] nums) {
+
+        return -1;
     }
 
 
@@ -135,36 +150,78 @@ public class ArrayLists {
     }
     private static void makeMiddleTests() {
         int[] nums;
+        /*
+        * makeMiddle([1, 2, 3, 4]) → [2, 3]
+        * makeMiddle([7, 1, 2, 3, 4, 9]) → [2, 3]
+        * makeMiddle([1, 2]) → [1, 2]
+        */
 
         System.out.println("\n*** makeMiddle Tests ***");
-        nums = new int[] {1, 2, 3, 4};
+        nums = makeMiddle(new int[] {1, 2, 3, 4});
         System.out.print("{1, 2, 3, 4} ---- ");
 
-        if (sum3(nums) == 6) {
+        if (nums[0] == 2 && nums[1] == 3) {
             System.out.println(PASSED);
         } else {
-            System.out.println(FAILED);
+            System.out.print(FAILED);
+            System.out.println("\tExpected: {2,3}  Actual: {" + nums[0] + ", " + nums[1] +"}");
+
         }
 
-        nums = new int[] {5, 11, 2};
-        System.out.print("{5, 11, 2} ---- ");
+        nums = makeMiddle(new int[] {7, 1, 2, 3, 4, 9});
+        System.out.print("{7, 1, 2, 3, 4, 9} ---- ");
 
-        if (sum3(nums) == 18) {
+        if (nums[0] == 2 && nums[1] == 3) {
             System.out.println(PASSED);
         } else {
-            System.out.println(FAILED);
+            System.out.print(FAILED);
+            System.out.println("\tExpected: {2,3}  Actual: {" + nums[0] + ", " + nums[1] +"}");
         }
 
-        nums = new int[] {7, 0, 0};
-        System.out.print("{7, 0, 0} ---- ");
+        nums = makeMiddle(new int[] { 1, 2});
+        System.out.print("{1, 2} ---- ");
 
-        if (sum3(nums) == 7) {
+        if (nums[0] == 1 && nums[2] == 2) {
             System.out.println(PASSED);
         } else {
-            System.out.println(FAILED);
+            System.out.print(FAILED);
+            System.out.println("\tExpected: {2,3}  Actual: {" + nums[0] + ", " + nums[1] +"}");
         }
     }
+    private static void maxTripleTests() {
+        int[] nums;
 
+        System.out.println("\n*** maxTriple Tests ***");
+        nums  = new int[] {1, 2, 3};
+        System.out.print("{1, 2, 3} ---- ");
+
+        if (maxTriple(nums) == 3) {
+            System.out.println(PASSED);
+        } else {
+            System.out.print(FAILED);
+            System.out.println("\tExpected: 5  Actual: " + maxTriple(nums));
+        }
+
+        nums  = new int[] {1, 5, 3};
+        System.out.print("{1, 5, 3} ---- ");
+
+        if (maxTriple(nums) == 5) {
+            System.out.println(PASSED);
+        } else {
+            System.out.print(FAILED);
+            System.out.println("\tExpected: 5  Actual: " + maxTriple(nums));
+        }
+
+        nums  = new int[] {5, 2, 3};
+        System.out.print("{5, 2, 3} ---- ");
+
+        if (maxTriple(nums) == 5) {
+            System.out.println(PASSED);
+        } else {
+            System.out.print(FAILED);
+            System.out.println("\tExpected: 5  Actual: " + maxTriple(nums));
+        }
+    }
     private static ArrayList<Integer> arrayToList(int[] array) {
         ArrayList<Integer> intList = new ArrayList<>();
 
