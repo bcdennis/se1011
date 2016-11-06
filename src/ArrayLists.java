@@ -20,63 +20,13 @@ public class ArrayLists {
 
     public static void main(String[] args) {
 
-        System.out.println("\n*** firstLast6 Tests ***");
-
-        int[] nums = new int[] {1, 2, 6};
-        System.out.print("{1, 2, 6} ---- ");
-
-        if (firstLast6(nums)) {
-            System.out.println(PASSED);
-        } else {
-            System.out.println(FAILED);
-        }
-
-        nums = new int[] {6, 1, 2, 3};
-        System.out.print("{6, 1, 2, 3} ---- ");
-
-        if (firstLast6(nums)) {
-            System.out.println(PASSED);
-        } else {
-            System.out.println(FAILED);
-        }
-
-        nums = new int[] {13, 6, 1, 2, 3};
-        System.out.print("{13, 6, 1, 2, 3} ---- ");
-
-        if (!firstLast6(nums)) {
-            System.out.println(PASSED);
-        } else {
-            System.out.println(FAILED);
-        }
-
-        System.out.println("\n*** sum3 Tests ***");
-        nums = new int[] {1, 2, 3};
-        System.out.print("{1, 2, 3} ---- ");
-
-        if (sum3(nums) == 6) {
-            System.out.println(PASSED);
-        } else {
-            System.out.println(FAILED);
-        }
-
-        nums = new int[] {5, 11, 2};
-        System.out.print("{5, 11, 2} ---- ");
-
-        if (sum3(nums) == 18) {
-            System.out.println(PASSED);
-        } else {
-            System.out.println(FAILED);
-        }
-
-        nums = new int[] {7, 0, 0};
-        System.out.print("{7, 0, 0} ---- ");
-
-        if (sum3(nums) == 7) {
-            System.out.println(PASSED);
-        } else {
-            System.out.println(FAILED);
-        }
+        firstLast6Tests();
+        sum3Tests();
     }
+
+
+
+
 
     /**
      * Given an array of ints, return true if 6 appears as either the first or last element in the array.
@@ -108,13 +58,125 @@ public class ArrayLists {
         return -1;
     }
 
+    /**
+     *
+     * Given an array of ints of even length, return a new array length 2 containing the middle two
+     * elements from the original array. The original array will be length 2 or more.
+     * makeMiddle([1, 2, 3, 4]) → [2, 3]
+     * makeMiddle([7, 1, 2, 3, 4, 9]) → [2, 3]
+     * makeMiddle([1, 2]) → [1, 2]
+     */
+    private static int[] makeMiddle(int[] nums) {
 
+        return new int[0];
+    }
+
+
+    private static void firstLast6Tests() {
+        System.out.println("\n*** firstLast6 Tests ***");
+
+        int[] nums = new int[] {1, 2, 6};
+        System.out.print("{1, 2, 6} ---- ");
+
+        if (firstLast6(nums)) {
+            System.out.println(PASSED);
+        } else {
+            System.out.println(FAILED);
+        }
+
+        nums = new int[] {6, 1, 2, 3};
+        System.out.print("{6, 1, 2, 3} ---- ");
+
+        if (firstLast6(nums)) {
+            System.out.println(PASSED);
+        } else {
+            System.out.println(FAILED);
+        }
+
+        nums = new int[] {13, 6, 1, 2, 3};
+        System.out.print("{13, 6, 1, 2, 3} ---- ");
+
+        if (!firstLast6(nums)) {
+            System.out.println(PASSED);
+        } else {
+            System.out.println(FAILED);
+        }
+    }
+    private static void sum3Tests() {
+        int[] nums;
+
+        System.out.println("\n*** sum3 Tests ***");
+        nums = new int[] {1, 2, 3};
+        System.out.print("{1, 2, 3} ---- ");
+
+        if (sum3(nums) == 6) {
+            System.out.println(PASSED);
+        } else {
+            System.out.println(FAILED);
+        }
+
+        nums = new int[] {5, 11, 2};
+        System.out.print("{5, 11, 2} ---- ");
+
+        if (sum3(nums) == 18) {
+            System.out.println(PASSED);
+        } else {
+            System.out.println(FAILED);
+        }
+
+        nums = new int[] {7, 0, 0};
+        System.out.print("{7, 0, 0} ---- ");
+
+        if (sum3(nums) == 7) {
+            System.out.println(PASSED);
+        } else {
+            System.out.println(FAILED);
+        }
+    }
+    private static void makeMiddleTests() {
+        int[] nums;
+
+        System.out.println("\n*** makeMiddle Tests ***");
+        nums = new int[] {1, 2, 3, 4};
+        System.out.print("{1, 2, 3, 4} ---- ");
+
+        if (sum3(nums) == 6) {
+            System.out.println(PASSED);
+        } else {
+            System.out.println(FAILED);
+        }
+
+        nums = new int[] {5, 11, 2};
+        System.out.print("{5, 11, 2} ---- ");
+
+        if (sum3(nums) == 18) {
+            System.out.println(PASSED);
+        } else {
+            System.out.println(FAILED);
+        }
+
+        nums = new int[] {7, 0, 0};
+        System.out.print("{7, 0, 0} ---- ");
+
+        if (sum3(nums) == 7) {
+            System.out.println(PASSED);
+        } else {
+            System.out.println(FAILED);
+        }
+    }
 
     private static ArrayList<Integer> arrayToList(int[] array) {
         ArrayList<Integer> intList = new ArrayList<>();
+
+        for(int i : array) {
+            intList.add(i);
+        }
+
+        /*  regular for loop
         for (int index = 0; index < array.length; index++) {
             intList.add(array[index]);
         }
+        */
         return intList;
     }
 }
