@@ -7,6 +7,7 @@
  */
 package edu.msoe.arrays;
 
+
 /**
  * This class models a collection of exam scores.
  * The default size of this list is 10, but it will grow automatically.

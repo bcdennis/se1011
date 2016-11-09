@@ -7,6 +7,7 @@
  */
 
 
+import com.sun.deploy.util.ArrayUtil;
 import java.util.ArrayList;
 
 /**
@@ -69,8 +70,11 @@ public class ArrayLists {
      * makeMiddle([1, 2]) → [1, 2]
      */
     private static int[] makeMiddle(int[] nums) {
+        ArrayList<Integer> list = arrayToList(nums);
 
-        return new int[]{-1, -1};
+        //
+
+        return listToArray(list);
     }
 
     /*
@@ -107,11 +111,11 @@ public class ArrayLists {
      * shiftLeft([1]) → [1]
      */
     private static int[] shiftLeft(int[] nums) {
-        int[] stub = new int[nums.length];
-        for (int i = 0; i < stub.length; i++) {
-            stub[i] = -1;
-        }
-        return stub;
+        ArrayList<Integer> list = arrayToList(nums);
+
+        //
+
+        return listToArray(list);
     }
 
     /*
@@ -235,7 +239,7 @@ public class ArrayLists {
         nums = makeMiddle(new int[] { 1, 2});
         System.out.print("{1, 2} ---- ");
 
-        if (nums[0] == 1 && nums[2] == 2) {
+        if (nums[0] == 1 && nums[1] == 2) {
             System.out.println(PASSED);
         } else {
             System.out.print(FAILED);
@@ -327,7 +331,7 @@ public class ArrayLists {
                     + ", " + nums[3] +"}");
         }
 
-        nums = makeMiddle(new int[] {1, 2});
+        nums = shiftLeft(new int[] {1, 2});
         System.out.print("{1, 2} ---- ");
 
         if (nums[0] == 2 && nums[1] == 1) {
@@ -428,5 +432,10 @@ public class ArrayLists {
         }
         */
         return intList;
+    }
+
+    private static int[] listToArray(ArrayList<Integer> list) {
+        //TODO implement this
+        return new int[0];
     }
 }
